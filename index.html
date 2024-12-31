@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Telegram Mini Apps Vanilla JS Sample App</title>
     <style>
+        <script src='//niphaumeenses.net/vignette.min.js' data-zone='8712034' data-sdk='show_8712034'></script>
         body {
             --bg-color: var(--tg-theme-bg-color);
             font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
@@ -132,6 +133,13 @@
                 Telegram.WebApp.MainButton.hide();
             } else {
                 Telegram.WebApp.MainButton.show();
+                
+show_8712034().then(() => {
+    // You need to add your user reward function here, which will be executed after the user watches the ad.
+    // For more details, please refer to the detailed instructions.
+    alert('You have seen ad ad!');
+})
+        
             }
         };
 
@@ -144,6 +152,12 @@
             expandEl.innerText = 'Is Expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false');
         }
 
+show_8712034().then(() => {
+    // You need to add your user reward function here, which will be executed after the user watches the ad.
+    // For more details, please refer to the detailed instructions.
+    alert('You have seen ad ad!');
+})
+        
         Telegram.WebApp.setHeaderColor('secondary_bg_color');
 
         setViewportData();
